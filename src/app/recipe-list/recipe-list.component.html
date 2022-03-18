@@ -17,11 +17,11 @@
 </div>
 <div>
 <ul>
-    <li *ngFor="let data of data">
-        <button type="button" (click)="onSelect(data)">
-            <div><h4>{{data.name}}</h4></div>
-            <div>{{data.description}}</div>
-            <div> <img [src]="data.image" alt="" class="img-responsive" style="max-height: 100px"></div>
+    <li *ngFor="let x of data">
+        <button type="button" (click)="onSelect(x)">
+            <div><h4>{{x.name}}</h4></div>
+            <div>{{x.description}}</div>
+            <div> <img [src]="x.image" alt="" class="img-responsive" style="max-height: 100px"></div>
         </button>
     </li>
 </ul>

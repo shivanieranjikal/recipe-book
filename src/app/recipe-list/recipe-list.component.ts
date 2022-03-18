@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { recipeinterface } from '../models/recipeinterface';
-import { recipedata } from '../recipedata';
+import { RecipeService } from '../recipe.service';
+
 
 @Component({
   selector: 'app-recipe-list',
@@ -8,16 +9,21 @@ import { recipedata } from '../recipedata';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  data = recipedata;
+ 
   selecteditem!: recipeinterface;
+  data: recipeinterface[] = [];
 
-
-  constructor() { }
-
+  constructor(private recipeService: RecipeService ) {}
   ngOnInit(): void {
+  
+    this.getData()
   }
 
   onSelect(data: recipeinterface) {
     this.selecteditem = data;
+  }
+
+  getData():void {
+    this.data=this.recipeService.getRecipes();
   }
 }
