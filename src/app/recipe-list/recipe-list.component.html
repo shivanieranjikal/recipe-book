@@ -1,0 +1,28 @@
+<h3>Recipe List:</h3>
+<div *ngIf="selecteditem">
+  
+   
+    <div>Name:   <input id="recipe-name" [(ngModel)]="selecteditem.name" placeholder=" Recipe name"></div>
+    <div>Description:  <input id="recipe-desc" [(ngModel)]="selecteditem.description" placeholder=" Recipe description"></div>
+    <div> <img [src]="selecteditem.image" alt="" class="img-responsive" style="max-height: 100px"></div>  
+
+    <div>
+        <ol>
+            <li *ngFor="let ingredient of selecteditem.ingredients">
+                <label>{{ingredient.name}}</label>
+                <label>{{ingredient.quantity}} - {{ingredient.units}}</label>
+            </li>
+        </ol>
+    </div>
+</div>
+<div>
+<ul>
+    <li *ngFor="let data of data">
+        <button type="button" (click)="onSelect(data)">
+            <div><h4>{{data.name}}</h4></div>
+            <div>{{data.description}}</div>
+            <div> <img [src]="data.image" alt="" class="img-responsive" style="max-height: 100px"></div>
+        </button>
+    </li>
+</ul>
+</div>
