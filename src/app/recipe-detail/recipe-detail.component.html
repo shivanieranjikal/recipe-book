@@ -1,0 +1,18 @@
+
+
+<div *ngIf="selectedRecipe">
+  
+   
+    <div>Name:   <input id="recipe-name" [(ngModel)]="selectedRecipe.name" placeholder=" Recipe name"></div>
+    <div>Description:  <input id="recipe-desc" [(ngModel)]="selectedRecipe.description" placeholder=" Recipe description"></div>
+    <div> <img [src]="selectedRecipe.image" alt="" class="img-responsive" style="max-height: 100px"></div>  
+
+    <div>
+        <ol>
+            <li *ngFor="let ingredient of selectedRecipe.ingredients">
+                <label>{{ingredient.name}}</label>
+                <label>{{ingredient.quantity}} - {{ingredient.units}}</label>
+            </li>
+        </ol>
+    </div>
+</div>
