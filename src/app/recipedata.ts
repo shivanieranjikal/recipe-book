@@ -11,13 +11,15 @@ export const recipedata: recipeinterface[] = [
                 id: 1,
                 name: "Chicken",
                 units: "gm",
-                quantity: 1000
+                quantity: 1000,
+                price: 0.2
             },
             {
                 id: 2,
                 name: "Rice",
                 units: "gm",
-                quantity: 500
+                quantity: 500,
+                price: 0.06
             }
         ]
     },
@@ -28,16 +30,18 @@ export const recipedata: recipeinterface[] = [
         image: "https://hellskitchenrecipes.com/wp-content/uploads/2020/01/Chicken-Stir-Fry-with-Rice-Noodles.png",
         ingredients: [
             {
-                id: 1,
+                id: 3,
                 name: "Chicken",
                 units: "gm",
-                quantity: 1000
+                quantity: 1000,
+                price: 0.2
             },
             {
-                id: 2,
+                id: 4,
                 name: "Noodles",
                 units: "gm",
-                quantity: 500
+                quantity: 500,
+                price: 0.1
             }
         ]
     },
@@ -48,16 +52,18 @@ export const recipedata: recipeinterface[] = [
         image: "https://www.foodieist.com/wp-content/uploads/2020/12/veg-momos-recipe-672x372.jpg",
         ingredients: [
             {
-                id: 1,
+                id: 5,
                 name: "Chicken",
                 units: "gm",
-                quantity: 1000
+                quantity: 1000,
+                price: 0.2
             },
             {
-                id: 2,
+                id: 6,
                 name: "Flour",
                 units: "gm",
-                quantity: 300
+                quantity: 300,
+                price: 0.07
             }
         ]
     },
@@ -68,16 +74,18 @@ export const recipedata: recipeinterface[] = [
         image: "https://manzaii.com/assets/img/items/1609839749Rst6gUTOUm.jpg",
         ingredients: [
             {
-                id: 1,
+                id: 7,
                 name: "Prawns",
                 units: "gm",
-                quantity: 1000
+                quantity: 1000,
+                price: 0.4
             },
             {
-                id: 2,
+                id: 8,
                 name: "Butter",
                 units: "gm",
-                quantity: 200
+                quantity: 200,
+                price: 0.75
             }
         ]
     }

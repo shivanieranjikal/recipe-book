@@ -4,7 +4,7 @@
 <div>
 <ul>
     <li *ngFor="let x of data">
-        <button type="button" (click)="onSelect(x)">
+        <button (click)="onSelect(x)">
             <div><h4>{{x.name}}</h4></div>
             <div>{{x.description}}</div>
             <div> <img [src]="x.image" alt="" class="img-responsive" style="max-height: 100px"></div>
