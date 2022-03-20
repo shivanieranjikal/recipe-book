@@ -1,19 +1,27 @@
-
+<div class="my-container">
 
 <div *ngIf="selectedRecipe">
-  
-   
-    <div>Name: {{selectedRecipe.name}}</div>
-    <div>Description: {{selectedRecipe.description}}</div>
-    <div> <img [src]="selectedRecipe.image" alt="" class="img-responsive" style="max-height: 100px"></div>  
 
-    <div>
-        <ol>
-            <li *ngFor="let ingredient of selectedRecipe.ingredients">
-                <label>{{ingredient.name}}</label>
-                <label>{{ingredient.quantity}} - {{ingredient.units}}</label>
-                <button type="button" (click)="addToCart(ingredient)">Add to Cart</button>
-            </li>
-        </ol>
+    <div class="row">
+        <h2> {{selectedRecipe.name}}</h2>
+        <div> <img [src]="selectedRecipe.image" alt="" class="img-responsive" style="max-height: 350px"></div>
+        <label></label>
+        <label></label>
     </div>
+    <div class="row">
+        <h4>Main ingredients:</h4>
+    </div>
+    <div>
+        <ul type="none">        
+            <li *ngFor="let ingredient of selectedRecipe.ingredients">
+              <div class="row">
+                <div class="col-xs-7">
+                <h5>{{ingredient.name}} : {{ ingredient.quantity}}  {{ingredient.units}}</h5>
+                </div>
+                <button class="btn btn-warning" (click)="addToCart(ingredient)">Add to Cart</button>
+            </div>
+            </li>  
+        </ul>
+    </div>
+</div>
 </div>

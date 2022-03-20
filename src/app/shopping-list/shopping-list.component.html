@@ -1,17 +1,27 @@
-<p>shopping-list works!</p>
 <div>
-    <ul *ngFor="let ingredient of list">
-        <li>
-            <div>
-                <label>{{ingredient.name}}</label>
-                <input id="ingredient-quantity" [(ngModel)]="ingredient.quantity" placeholder="Quantity">
-                <label>- {{ingredient.units}}</label>
-                <label>Rate per unit: Rs. {{ingredient.price}}</label>
-                <label>Amount: {{ingredient.quantity*ingredient.price}}</label>
-                <button (click)="removeFromCart(ingredient)">Remove</button>
-
-            </div>
-        </li>
-    </ul>
-    <label>Grand Total: {{calculateTotal()}}</label>
+    <h1>Grand Total: INR {{calculateTotal()}}</h1>
 </div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><h4>Ingredient</h4></th>
+        <th scope="col"><h4>Quantity</h4></th>
+        <th scope="col"><h4>Unit</h4></th>
+        <th scope="col"><h4>Price per unit</h4></th>
+        <th scope="col"><h4>Amount</h4></th>
+        <th scope="col"><h4>Action</h4></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ingredient of list"> 
+        <td><h5>{{ingredient.name}}</h5></td>
+        <td><input id="ingredient-quantity" class="form-control" [(ngModel)]="ingredient.quantity" placeholder="Quantity"></td>
+        <td><h5>{{ingredient.units}}</h5></td>
+        <td><h5> {{ingredient.price}}</h5></td>
+        <td><h5> {{ingredient.quantity*ingredient.price}}</h5></td>
+        <td><button class="btn btn-warning" (click)="removeFromCart(ingredient)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+
